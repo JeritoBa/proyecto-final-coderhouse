@@ -1,0 +1,681 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Generales */
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cabin', sans-serif;
+}
+
+h1 {
+    font-size: 3.3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4.7rem;
+    }
+    h2 {
+        font-size: 3.7rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 10px;
+}
+
+/* Utilidades */
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.margin-top {
+    margin-top: 1rem;
+}
+
+.flex-mobile {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .columna-horizontal {
+        display: flex;
+    }
+}
+
+/* Header */
+
+/* Hero */
+
+div.hero {
+    background-image: url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 416px;
+    position: relative;
+}
+
+div.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+@media (min-width: 768px) {
+    div.hero {
+        height: 489px;
+        background-position: left top;
+    }
+}
+
+/* Nav Redes*/
+
+ul.redes {
+    text-align: center;
+    position: relative;
+    font-size: 2.5rem;
+    padding: 10px 0 40px 0;
+}
+
+ul.redes a {
+    color: #fff;
+    transition: font-size .3s ease-in-out;
+}
+
+ul.redes a:hover {
+    font-size: 3.2rem;
+}
+
+@media (min-width: 768px) {
+    ul.redes {
+        font-size: 4rem;
+    }
+    ul.redes li {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+}
+
+/* Titulo */
+
+div.titulo {
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+div.titulo h1 {
+    font-size: 4rem;
+}
+
+div.titulo p {
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+    div.titulo {
+        padding-top: 50px;
+    }
+}
+
+/* NavBar Principal */
+
+nav.nav-principal {
+    background-color: #2F2F2F;
+    height: 144px;
+    position: sticky;
+    top:0;
+    left: 0;
+}
+
+nav.nav-principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+nav.nav-principal div.logo {
+    align-self: center;
+    margin-left: 1px;
+}
+
+nav.nav-principal img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+nav.nav-principal div.logo a {
+    align-self: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+    nav.nav-principal div.logo {
+        flex-basis: 40%;
+        align-self: center;
+        margin-left: 42px;
+    }
+    nav.nav-principal div.logo a {
+        align-self: center;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 10px;
+    }
+}
+
+/* Links */
+
+/* Mobile Menu */
+
+div.links {
+    display: none;
+}
+
+div.mobile-menu {
+    align-self: center;
+    margin-right: 25px;
+}
+
+div.mobile-menu span {
+    display: block;
+    color: transparent;
+    height: 7px;
+    width: 70px;
+    background-color: #fff;
+    margin: 10px;
+}
+
+div.mobile-menu:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    div.links {
+        display: inline-block;
+    }
+    div.mobile-menu {
+        display: none;
+    }
+}
+
+/* Links */                                                             
+
+div.links a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s color ease-in-out;
+}
+
+div.links a:hover {
+    color: #fbaf00;
+}
+
+@media (min-width: 768px) {
+    div.links  {
+        align-self: center;
+        margin-right: 32px;
+    }
+    div.links a {
+        padding: 10px;
+    }
+}
+
+/*  Main */
+
+/* Info Principal */
+
+section.info-principal {
+    margin-top: 48px
+}
+
+section.info-principal h2 {
+    text-align: center;
+}
+
+div.columna-info {
+    margin-top: 48px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+div.columna-info p:first-of-type {
+    font-size: 6rem;
+    text-align: center;
+    color: #33673b;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    div.columna-info {
+        padding: 0 30px;
+        margin-top: 60px;
+    }
+}
+
+/* Compras */
+
+section.compras {
+    margin: 74px auto;
+}
+
+section.compras h2 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+section.compras div.columna-horizontal {
+    justify-content: center;
+}
+
+div.suscripcion {
+    margin: 32px;
+    flex-basis: 50%;
+    height: 432px;
+    border-radius: 5px;
+    text-align: center;
+    border: #e1e1e1 solid 1px;
+    text-transform: uppercase;
+    color: #e1e1e1;
+    transition: box-shadow .5s ease-in-out;
+}
+
+div.suscripcion:hover {
+    box-shadow: 0px 0px 29px -1px rgba(0,0,0,0.75);
+}
+
+div.suscripcion h3 {
+    margin-top: 32px;
+    font-size: 2rem;
+    color: #D64933;
+}
+
+div.suscripcion p.precio {
+    color: #00A878;
+    font-size: 3.7rem;
+    margin: 16px 0;
+}
+
+div.suscripcion p.precio span {
+    font-size: 4rem;
+}
+
+p.info-sus {
+    color: #1A181B;
+    margin: 32px 0;
+}
+
+ul.beneficios li {
+    list-style-type: none;
+    padding: 5px 0;
+    color: #8B8982;
+}
+
+ul.beneficios i {
+    color: #97EAD2;
+}
+
+a.btn-comprar {
+    padding: 10px;
+    text-decoration: none;
+    background-color: #5A8321;
+    color: #fff;
+    transition: background-color .3s ease-in-out;
+}
+
+a.btn-comprar:hover {
+    background-color: #436218;
+}
+
+@media (min-width: 768px) {
+    div.suscripcion {
+        margin: 0 32px;
+        height: 400px;
+    }
+}
+
+/* Contenido Previo */
+
+div.caja {
+    border: none;
+    margin: 20px 0;
+    padding: 0 30px;
+}
+
+div.caja div.imagen-cont p {
+    text-align: center;
+}
+
+div.caja div.imagen-cont img {
+    width: 300px;
+}
+
+@media (min-width: 768px) {
+    div.caja {
+        border: 1px #e1e1e1 solid;
+        border-radius: 5px;
+        padding: 50px 10px;
+        margin: 0 10px;
+        width: 50%;
+        height: 14rem;
+    }
+    div.caja div.imagen-cont {
+        width: 500px;
+        padding-left: 2px;
+    }
+}
+
+/* Nuestro Blog */
+
+section.blog {
+    margin-top: 64px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    background-image: url(../img/blog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top top;
+    position: relative
+}
+
+section.blog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+section.blog h2, section.blog p, section.blog a {
+    position: relative;
+    color: #fff;
+}
+
+section.blog p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    section.blog {
+        height: 400px;
+    }
+}
+
+/* Testimoniales */
+
+section.testimoniales {
+    margin-bottom: 30px;
+}
+
+section.testimoniales h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+div.testimoniales-box {
+    display: flex;
+    flex-direction: column-reverse;
+    box-shadow: 0px 0px 26px -2px rgba(0,0,0,0.75);
+    width: 70%;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+div.test-box {
+    justify-content: space-around;
+}
+
+div.logo-test {
+    margin: auto;
+}
+
+div.logo-test img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+div.testimoniales-box p {
+    padding: 10px;
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+    div.testimoniales-box {
+        width: 30%;
+    }
+}
+
+/* Footer */
+
+footer.site-footer {
+    text-align: center;
+    color: #fff;
+    background-color: #2F2F2F;
+    height: 10rem;
+}
+
+footer.site-footer h2 {
+    padding-top: 3rem;
+}
+
+/* Paginas Externas */
+
+/* Sobre Nosotros */
+
+/* Info Principal */
+
+section.info-principal h1 {
+    text-align: center;
+}
+
+/* Tecnologias Usadas */
+
+section.tecnologias-usadas {
+    margin: 70px 0;
+}
+
+section.tecnologias-usadas h2 {
+    text-align: center;
+}
+
+section.tecnologias-usadas div.contenedor-nosotros {
+    margin-top: 50px;
+}
+
+section.tecnologias-usadas div.icono {
+    margin: 0 10px ;
+    text-align: center;
+}
+
+section.tecnologias-usadas img {
+    padding-bottom: 5px;
+}
+
+div.icono {
+    padding: 32px 0;
+}
+
+div.icono:last-of-type {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    div.icono {
+        padding: 0;
+    }
+}
+
+/* Confianza */
+
+section.confianza {
+    text-align: center;
+    padding: 0 20px;
+    margin: 60px 0;
+}
+
+@media(min-width: 768px) {
+    section.confianza {
+        padding: 0 50px;
+    }
+}
+/* ------------- CAMBIO DE ARCHIVO  --------------- */ 
+
+/* Ingresar */
+
+div.sign-in {
+    width: 70%;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+}
+
+div.sign-in h1 {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+}
+
+div.sign-in p {
+    text-align: center;
+    padding-top: 20px;
+}
+
+div.inicio-redes {
+    margin: 10px auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.inicio-redes a {
+    display: block;
+    border-radius: 2px;
+    padding: 15px 0;
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 800px) {
+    div.sign-in {
+        width: 30rem;
+    }
+    div.inicio-redes {
+        justify-content: center;
+        flex-direction: row;
+    }
+    div.inicio-redes a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 50%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+div.inicio-redes i {
+    font-size: 1.3rem;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+a:hover, .a:hover {
+    text-decoration: none !important; /* Conflicto de Bootstrap */
+}
+
+/* Iconos */
+
+a.facebook-sign {
+    background-color: #3B5998;
+    transition: background-color .3s ease-in-out;
+}
+
+a.facebook-sign:hover {
+    background-color: #273B64;
+}
+
+a.gmail-sign {
+    background-color: #DB4A39;
+    transition: background-color .3s ease-in-out;
+}
+
+a.gmail-sign:hover {
+    background-color: #AD2E1F;
+}
+
+/* ------------ CAMBIO DE PAGINA -------------*/
+
+/* Registro */
+
+div.sign-up {
+    width: 70%;
+    margin: 2rem auto;
+    margin-bottom: 5rem;
+}
+
+div.sign-up h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 32px 0;
+}
+
+div.sign-up p {
+    margin: 32px 0;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    div.sign-up {
+        width: 30rem;
+    }
+    div.sign-up h1 {
+        font-size: 2.2rem;
+    }
+}
