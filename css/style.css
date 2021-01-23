@@ -356,15 +356,16 @@ ul.beneficios i {
     color: #97EAD2;
 }
 
-a.btn-comprar {
+.btn-comprar {
     padding: 10px;
+    border-radius: 2px;
     text-decoration: none;
     background-color: #5A8321;
-    color: #fff;
+    color: #fff !important;
     transition: background-color .3s ease-in-out;
 }
 
-a.btn-comprar:hover {
+.btn-comprar:hover {
     background-color: #436218;
 }
 
