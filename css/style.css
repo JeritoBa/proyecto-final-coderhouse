@@ -30,18 +30,6 @@ h4 {
     font-size: 1.8rem;
 }
 
-@media (min-width: 768px) {
-    h1 {
-        font-size: 4.7rem;
-    }
-    h2 {
-        font-size: 3.7rem;
-    }
-    h3 {
-        font-size: 3rem;
-    }
-}
-
 img {
     max-width: 100%;
 }
@@ -69,12 +57,6 @@ img {
     display: flex;
 }
 
-@media (min-width: 768px) {
-    .columna-horizontal {
-        display: flex;
-    }
-}
-
 /* Header */
 
 /* Hero */
@@ -98,13 +80,6 @@ div.hero::before {
     background-color: rgba(0, 0, 0, .6);
 }
 
-@media (min-width: 768px) {
-    div.hero {
-        height: 489px;
-        background-position: left top;
-    }
-}
-
 /* Nav Redes*/
 
 ul.redes {
@@ -112,6 +87,11 @@ ul.redes {
     position: relative;
     font-size: 2.5rem;
     padding: 10px 0 40px 0;
+}
+
+ul.redes li {
+    display: inline-block;
+    padding: 30px 5px;
 }
 
 ul.redes a {
@@ -123,16 +103,6 @@ ul.redes a:hover {
     font-size: 3.2rem;
 }
 
-@media (min-width: 768px) {
-    ul.redes {
-        font-size: 4rem;
-    }
-    ul.redes li {
-        display: inline-block;
-        padding: 10px 20px;
-    }
-}
-
 /* Titulo */
 
 div.titulo {
@@ -142,17 +112,11 @@ div.titulo {
 }
 
 div.titulo h1 {
-    font-size: 4rem;
+    font-size: 3.7rem;
 }
 
 div.titulo p {
-    font-size: 1.3rem;
-}
-
-@media (min-width: 768px) {
-    div.titulo {
-        padding-top: 50px;
-    }
+    font-size: 1.4rem;
 }
 
 /* NavBar Principal */
@@ -190,21 +154,6 @@ nav.nav-principal div.logo a {
     padding-left: 10px;
 }
 
-@media (min-width: 768px) {
-    nav.nav-principal div.logo {
-        flex-basis: 40%;
-        align-self: center;
-        margin-left: 42px;
-    }
-    nav.nav-principal div.logo a {
-        align-self: center;
-        font-size: 1.6rem;
-        text-decoration: none;
-        color: #fff;
-        padding-left: 10px;
-    }
-}
-
 /* Links */
 
 /* Mobile Menu */
@@ -230,16 +179,6 @@ div.mobile-menu span {
 div.mobile-menu:hover {
     cursor: pointer;
 }
-
-@media (min-width: 768px) {
-    div.links {
-        display: inline-block;
-    }
-    div.mobile-menu {
-        display: none;
-    }
-}
-
 /* Links */                                                             
 
 div.links a {
@@ -250,16 +189,6 @@ div.links a {
 
 div.links a:hover {
     color: #fbaf00;
-}
-
-@media (min-width: 768px) {
-    div.links  {
-        align-self: center;
-        margin-right: 32px;
-    }
-    div.links a {
-        padding: 10px;
-    }
 }
 
 /*  Main */
@@ -287,13 +216,6 @@ div.columna-info p:first-of-type {
     padding-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-    div.columna-info {
-        padding: 0 30px;
-        margin-top: 60px;
-    }
-}
-
 /* Compras */
 
 section.compras {
@@ -311,18 +233,20 @@ section.compras div.columna-horizontal {
 
 div.suscripcion {
     margin: 32px;
-    flex-basis: 50%;
+    flex-basis: 42%;
     height: 432px;
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     border: #e1e1e1 solid 1px;
     text-transform: uppercase;
     color: #e1e1e1;
-    transition: box-shadow .5s ease-in-out;
+    transition: transform .3s ease-in-out, box-shadow .5s ease-in-out, border .5s ease-in-out;
 }
 
 div.suscripcion:hover {
-    box-shadow: 0px 0px 29px -1px rgba(0,0,0,0.75);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 36px -9px rgba(0,0,0,0.75);
+    border: #ED6A5A 3px solid;
 }
 
 div.suscripcion h3 {
@@ -369,44 +293,6 @@ ul.beneficios i {
     background-color: #436218;
 }
 
-@media (min-width: 768px) {
-    div.suscripcion {
-        margin: 0 32px;
-        height: 400px;
-    }
-}
-
-/* Contenido Previo */
-
-div.caja {
-    border: none;
-    margin: 20px 0;
-    padding: 0 30px;
-}
-
-div.caja div.imagen-cont p {
-    text-align: center;
-}
-
-div.caja div.imagen-cont img {
-    width: 300px;
-}
-
-@media (min-width: 768px) {
-    div.caja {
-        border: 1px #e1e1e1 solid;
-        border-radius: 5px;
-        padding: 50px 10px;
-        margin: 0 10px;
-        width: 50%;
-        height: 14rem;
-    }
-    div.caja div.imagen-cont {
-        width: 500px;
-        padding-left: 2px;
-    }
-}
-
 /* Nuestro Blog */
 
 section.blog {
@@ -418,6 +304,7 @@ section.blog {
     background-image: url(../img/blog.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     background-position: top top;
     position: relative
 }
@@ -441,12 +328,6 @@ section.blog p {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 16px;
-}
-
-@media (min-width: 768px) {
-    section.blog {
-        height: 400px;
-    }
 }
 
 /* Testimoniales */
@@ -482,15 +363,15 @@ div.logo-test img {
     width: 150px;
 }
 
+div.testimoniales-box h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 16px;
+}
+
 div.testimoniales-box p {
     padding: 10px;
     text-align: justify;
-}
-
-@media (min-width: 768px) {
-    div.testimoniales-box {
-        width: 30%;
-    }
 }
 
 /* Footer */
@@ -504,6 +385,144 @@ footer.site-footer {
 
 footer.site-footer h2 {
     padding-top: 3rem;
+}
+
+/* Media Queries */
+
+/* Generales */
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4.7rem;
+    }
+    h2 {
+        font-size: 3.7rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+/* Utilidades */
+
+@media (min-width: 768px) {
+    .columna-horizontal {
+        display: flex;
+    }
+}
+
+/* Hero */
+
+@media (min-width: 768px) {
+    div.hero {
+        height: 489px;
+        background-position: left top;
+    }
+}
+
+/* Nav Redes */
+
+@media (min-width: 768px) {
+    ul.redes {
+        font-size: 4rem;
+    }
+    ul.redes li {
+        padding: 10px 20px;
+    }
+}
+
+/* Titulo */
+
+@media (min-width: 768px) {
+    div.titulo {
+        padding-top: 50px;
+    }
+    div.titulo h1 {
+        font-size: 5rem;
+    }
+    div.titulo p {
+        font-size: 1.5rem;
+    }
+}
+
+/* NavBar */
+
+/* Logo */
+
+@media (min-width: 768px) {
+    nav.nav-principal div.logo {
+        flex-basis: 40%;
+        align-self: center;
+        margin-left: 42px;
+    }
+    nav.nav-principal div.logo a {
+        align-self: center;
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: #fff;
+        padding-left: 10px;
+    }
+}
+
+/* Links */
+
+/* Mobile */
+
+@media (min-width: 768px) {
+    div.links {
+        display: inline-block;
+    }
+    div.mobile-menu {
+        display: none;
+    }
+}
+
+/* Desktop/Tablet */
+
+@media (min-width: 768px) {
+    div.links  {
+        align-self: center;
+        margin-right: 32px;
+    }
+    div.links a {
+        padding: 10px;
+    }
+}
+
+/*  Main */
+
+/* Info Principal */
+
+@media (min-width: 768px) {
+    div.columna-info {
+        padding: 0 30px;
+        margin-top: 60px;
+    }
+}
+
+/* Compras */
+
+@media (min-width: 768px) {
+    div.suscripcion {
+        margin: 10px 32px 0 32px;
+        height: 400px;
+    }
+}
+
+/* Nuestro Blog */
+
+@media (min-width: 768px) {
+    section.blog {
+        height: 400px;
+    }
+}
+
+/* Testimoniales */
+
+@media (min-width: 768px) {
+    div.testimoniales-box {
+        width: 30%;
+    }
 }
 
 /* Paginas Externas */
@@ -547,25 +566,15 @@ div.icono:last-of-type {
     padding: 0;
 }
 
-@media (min-width: 768px) {
-    div.icono {
-        padding: 0;
-    }
-}
-
 /* Confianza */
 
 section.confianza {
     text-align: center;
     padding: 0 20px;
-    margin: 60px 0;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
-@media(min-width: 768px) {
-    section.confianza {
-        padding: 0 50px;
-    }
-}
 /* ------------- CAMBIO DE ARCHIVO  --------------- */ 
 
 /* Ingresar */
@@ -603,24 +612,6 @@ div.inicio-redes a {
     color: #fff;
 }
 
-@media (min-width: 800px) {
-    div.sign-in {
-        width: 30rem;
-    }
-    div.inicio-redes {
-        justify-content: center;
-        flex-direction: row;
-    }
-    div.inicio-redes a {
-        display: inline-block;
-        margin: 0 10px;
-        width: 50%;
-    }
-    h1 {
-        font-size: 3rem;
-    }
-}
-
 div.inicio-redes i {
     font-size: 1.3rem;
     padding-top: 5px;
@@ -651,7 +642,7 @@ a.gmail-sign:hover {
     background-color: #AD2E1F;
 }
 
-/* ------------ CAMBIO DE PAGINA -------------*/
+/* ------------ CAMBIO DE ARCHIVO -------------*/
 
 /* Registro */
 
@@ -671,6 +662,53 @@ div.sign-up p {
     margin: 32px 0;
     text-align: center;
 }
+
+/* Media Queries */
+
+/* Paginas Externas */
+
+/* Sobre Nosotros */
+
+/* Tecnologias Usadas */
+
+@media (min-width: 768px) {
+    div.icono {
+        padding: 0;
+    }
+}
+/* Confianza */
+
+@media(min-width: 768px) {
+    section.confianza {
+        padding: 0 50px;
+    }
+}
+
+/* ---------------- CAMBIO DE ARCHIVO --------------- */
+
+/* Ingresar */
+
+@media (min-width: 800px) {
+    div.sign-in {
+        width: 30rem;
+    }
+    div.inicio-redes {
+        justify-content: center;
+        flex-direction: row;
+    }
+    div.inicio-redes a {
+        display: inline-block;
+        margin: 0 10px;
+        width: 50%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* ---------------- CAMBIO DE ARCHIVO --------------- */
+
+/* Sign In -- Sing Up */
 
 @media (min-width: 800px) {
     div.sign-up {
