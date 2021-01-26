@@ -356,6 +356,7 @@ div.test-box {
 
 div.logo-test {
     margin: 16px auto;
+    margin: 0;
 }
 
 div.logo-test img {
